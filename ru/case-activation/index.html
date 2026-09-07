@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Онбординг и активация — кейс Эльвины Фазуллиной</title>
+  <meta name="description" content="Кейс Эльвины Фазуллиной: переработка онбординга Car Play Sync, рост конверсии в подписку на 15% и добавленных автомобилей на 22%.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://elvinadesigner.com/ru/case-activation/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Онбординг и активация — кейс Эльвины Фазуллиной">
+  <meta property="og:description" content="Как переработка онбординга Car Play Sync подняла конверсию в подписку на 15%.">
+  <meta property="og:url" content="https://elvinadesigner.com/ru/case-activation/">
+  <meta property="og:image" content="https://elvinadesigner.com/case1-bg.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Онбординг и активация Car Play Sync",
+    "description": "Кейс о снижении дропа в онбординге и росте конверсии в подписку на 15%.",
+    "url": "https://elvinadesigner.com/ru/case-activation/",
+    "inLanguage": "ru-RU",
+    "creator": {"@type": "Person", "name": "Эльвина Фазуллина", "url": "https://elvinadesigner.com/ru/"}
+  }
+  </script>
+  <style>
+    :root { --bg:#0d0d0d; --card:#262626; --text:#fff; --muted:rgba(255,255,255,.6); }
+    * { box-sizing:border-box; }
+    html, body { min-width: 840px; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:Geist, Arial, sans-serif; font-size:16px; font-weight:400; letter-spacing:-.2px; }
+    p, ol, figure, h1, h2 { margin:0; }
+    h1, h2 { font:inherit; }
+    .back { position:fixed; top:30px; left:30px; z-index:10; display:flex; align-items:center; justify-content:center; min-height:46px; padding:12px 24px 14px; border-radius:100px; background:rgba(255,255,255,.1); color:#fff; line-height:1.2; text-decoration:none; -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); transition:transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+    @media (hover:hover) and (pointer:fine) { .back:hover { transform:translateY(-1px); background:rgba(255,255,255,.16); box-shadow:0 8px 24px rgba(0,0,0,.22); } }
+    .back:active { transform:scale(.97); background:rgba(255,255,255,.2); box-shadow:none; }
+    .back:focus-visible { outline:2px solid rgba(255,255,255,.8); outline-offset:3px; }
+    @media (prefers-reduced-motion:reduce) { .back { transition:none; } }
+    .case { width:780px; margin:30px auto 0; padding-bottom:80px; }
+    .case > * + * { margin-top:80px; }
+    .hero { display:flex; flex-direction:column; gap:20px; }
+    .hero-copy { display:flex; flex-direction:column; gap:8px; padding:12px 0; }
+    .hero-copy .eyebrow { color:var(--muted); font-size:18px; line-height:1.2; }
+    .body { font-size:16px; line-height:1.4; }
+    .meta { display:flex; gap:80px; }
+    .meta-item { display:flex; flex-direction:column; gap:8px; padding:12px 0; line-height:1.4; }
+    .meta-item .key { color:var(--muted); line-height:1.2; }
+    .meta-item:last-child { flex:1; min-width:0; }
+    .image-panel { position:relative; width:780px; height:522px; overflow:hidden; border-radius:12px; }
+    .gallery-track { position:relative; width:780px; height:100%; }
+    .hero-panel { height:368px; border:1px solid rgba(255,255,255,.1); background:var(--card); }
+    .hero-panel--rive { height:501px; background:#0d0d0d; }
+    .hero-panel__background { position:absolute; left:-1px; top:-1px; width:calc(100% + 2px); height:calc(100% + 2px); object-fit:cover; pointer-events:none; }
+    .hero-panel__rive { position:absolute; inset:0; display:block; width:100%; height:100%; pointer-events:none; }
+    .phone { position:absolute; width:224px; height:486px; overflow:hidden; border:1px solid rgba(255,255,255,.04); border-radius:28px; background:#17191f; }
+    .phone img, .phone video { display:block; width:100%; height:100%; object-fit:cover; border-radius:27px; }
+    .phone .overlay { position:absolute; inset:0; }
+    .hero-panel .phone { top:32px; width:211px; height:457px; }
+    .hero-panel .phone.one { left:164px; }
+    .hero-panel .phone.two { left:404px; }
+    .copy { width:560px; margin-left:auto; margin-right:auto; }
+    .copy.stack { display:flex; flex-direction:column; gap:20px; }
+    .brand-line { position:relative; }
+    .brand-logo { display:inline-block; width:28px; height:28px; margin:0 6px; border-radius:8px; vertical-align:middle; transform:translateY(-1px); }
+    .growth-arrow { display:inline-block; width:13px; height:10px; margin:0; vertical-align:-1px; }
+    .growth-arrow path { fill:none; stroke:currentColor; stroke-linecap:round; stroke-linejoin:round; stroke-width:1.25; }
+    .labelled { display:flex; flex-direction:column; gap:8px; }
+    .label { color:var(--muted); line-height:1.2; }
+    .copy p { line-height:1.4; }
+    .gallery .phone:nth-of-type(1) { left:14px; top:0; }
+    .gallery .phone:nth-of-type(2) { left:278px; top:0; }
+    .gallery .phone:nth-of-type(3) { left:542px; top:0; }
+    .gallery.two .phone:nth-of-type(1) { left:146px; }
+    .gallery.two .phone:nth-of-type(2) { left:410px; }
+    .caption { position:absolute; top:500px; color:var(--muted); font-size:14px; line-height:1.2; white-space:nowrap; text-align:center; transform:translateX(-50%); }
+    .caption.home { left:126px; }
+    .caption.docs { left:390px; }
+    .caption.service { left:654px; }
+    .caption.main { left:126px; }
+    .caption.paywall { left:390px; }
+    .caption.auth { left:654px; }
+    .caption.flow { left:390px; }
+    .caption.v1 { left:258px; }
+    .caption.v2 { left:522px; }
+    .caption.onboarding { left:390px; }
+    .caption.demo { left:390px; }
+    .caption.supported { left:390px; }
+    .caption.unsupported { left:390px; }
+    .context { display:flex; flex-direction:column; align-items:center; gap:40px; }
+    .diagram { position:relative; width:780px; height:177px; overflow:hidden; border:1px solid rgba(255,255,255,.1); border-radius:12px; background:var(--card); }
+    .diagram-step { position:absolute; top:57px; display:flex; align-items:center; justify-content:center; width:146px; height:62px; padding:0 16px; border-radius:24px; background:#3d3d3d; text-align:center; font-size:14px; font-weight:400; line-height:1.2; }
+    .diagram-mobile-arrow { display:none; }
+    .diagram-step.first { left:109px; }
+    .diagram-step.second { left:316px; color:#000; background:linear-gradient(95.022deg,#6c99ff .54774%,#7cfbfd 100.55%); }
+    .diagram-step.third { left:523px; }
+    .diagram-arrow { position:absolute; top:76px; width:53px; height:23px; }
+    .diagram-arrow.a { left:259px; }
+    .diagram-arrow.b { left:466px; }
+    .problem-copy { display:flex; flex-direction:column; gap:8px; }
+    .problem-copy .body + .body { margin-top:16px; }
+    .goals p + p { margin-top:16px; }
+    .goals .key { color:var(--muted); }
+    .blank-phone::after { content:""; position:absolute; top:50%; left:50%; width:24px; height:24px; margin:-12px; border:2px solid rgba(255,255,255,.18); border-top-color:#3982ff; border-radius:50%; }
+    @media (max-width:1000px) {
+      html, body { min-width:0; overflow-x:hidden; }
+      .back { position:fixed; top:20px; left:20px; min-height:44px; padding:11px 20px 13px; }
+      .case { width:100%; max-width:390px; margin:86px auto 0; padding:0 16px 104px; }
+      .case > * + * { margin-top:53px; }
+      .hero { gap:16px; }
+      .hero-copy { padding:0; }
+      .hero-copy .eyebrow { font-size:18px; }
+      .meta { display:flex; flex-direction:column; gap:0; }
+      .meta-item { min-width:0; padding:12px 0; }
+      .meta-item:last-child { flex:0; }
+      .image-panel, .diagram { width:100%; }
+      .hero-panel { height:368px; aspect-ratio:auto; }
+      .hero-panel--rive { height:225px; }
+      .hero-panel .phone { top:22px; width:148px; height:322px; aspect-ratio:auto; border-radius:20px; }
+      .hero-panel .phone.one { left:20px; }
+      .hero-panel .phone.two { left:190px; }
+      .phone, .phone img { border-radius:20px; }
+      .copy { width:100%; }
+      .copy.stack { gap:16px; }
+      /* Нативная горизонтальная лента: карточки не ужимаются и прокручиваются пальцем. */
+      .gallery { width:100%; height:522px; aspect-ratio:auto; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; scroll-snap-type:none; scroll-behavior:auto; touch-action:pan-x; scrollbar-width:none; }
+      .gallery.two { height:546px; }
+      .gallery::-webkit-scrollbar { display:none; }
+      .gallery-track { width:780px; min-width:780px; }
+      .gallery.two .gallery-track { width:648px; min-width:648px; }
+      @media (pointer:fine) { .gallery { cursor:grab; } .gallery.is-dragging { cursor:grabbing; user-select:none; } }
+      .gallery .phone { width:224px; height:486px; aspect-ratio:auto; border-radius:28px; }
+      .gallery .phone:nth-of-type(1) { left:14px; top:0; }
+      .gallery .phone:nth-of-type(2) { left:278px; top:0; }
+      .gallery .phone:nth-of-type(3) { left:542px; top:0; }
+      .gallery.two .phone:nth-of-type(1) { left:14px; }
+      .gallery.two .phone:nth-of-type(2) { left:278px; }
+      .caption { top:500px; font-size:14px; }
+      .caption.home { left:126px; }.caption.docs { left:390px; }.caption.service { left:654px; }
+      .caption.main { left:126px; }.caption.paywall { left:390px; }.caption.auth { left:654px; }
+      .gallery > .caption.flow, .gallery > .caption.onboarding, .gallery > .caption.demo, .gallery > .caption.supported, .gallery > .caption.unsupported { position:sticky; left:0; z-index:1; display:block; width:100%; transform:none; }
+      .gallery > .caption.flow, .gallery > .caption.onboarding { top:0; margin-top:-22px; }
+      .gallery.two > .caption.demo { top:0; margin-top:-46px; }
+      .caption.v1 { left:126px; }.caption.v2 { left:390px; }
+      .gallery.two > .caption.supported, .gallery.two > .caption.unsupported { top:0; margin-top:-34px; padding:0; font-size:14px; line-height:1.2; text-align:center; white-space:normal; }
+      .context { gap:24px; }
+      /* Внутренний контейнер схемы из мобильного фрейма Figma: 358 × 372. */
+      .diagram { height:auto; aspect-ratio:358 / 372; border-radius:16px; }
+      .diagram-step { width:40.782%; height:16.667%; padding:0 8px; border-radius:24px; font-size:14px; font-weight:400; line-height:1.2; }
+      .diagram-step.first { top:8.602%; left:29.888%; }.diagram-step.second { top:41.398%; left:29.888%; }.diagram-step.third { top:74.731%; left:29.888%; }
+      .diagram-arrow { display:none; }
+      .diagram-mobile-arrow { position:absolute; left:calc(50% - 9px); display:block; width:18px; height:51px; }
+      .diagram-mobile-arrow.first { top:calc(8.602% + 16.667% + 5px); }
+      .diagram-mobile-arrow.second { top:calc(41.398% + 16.667% + 5px); }
+      .labelled { gap:8px; }
+    }
+  </style>
+  <link rel="alternate" hreflang="en" href="https://elvinadesigner.com/case-activation/">
+  <link rel="alternate" hreflang="ru" href="https://elvinadesigner.com/ru/case-activation/">
+</head>
+<body>
+  <a class="back" href="/ru/#cases">Назад</a>
+  <main class="case">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1 class="eyebrow">Онбординг и активация</h1>
+        <p class="body">Снизила дроп на главной точке активации в приложении и подняла конверсию в подписку на 15%</p>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><p class="key">Роль</p><p>Ведущий дизайнер</p></div>
+        <div class="meta-item"><p class="key">Таймлайн</p><p>2024-2025</p></div>
+        <div class="meta-item"><p class="key">Результаты</p><p>+15% конверсия в подписку, +22% количества добавленных авто</p></div>
+      </div>
+      <div class="image-panel hero-panel hero-panel--rive">
+        <img class="hero-panel__background" src="/case1-bg.webp" alt="" aria-hidden="true">
+        <canvas id="rive-case-hero" class="hero-panel__rive" aria-label="Анимация экрана приложения Car Play Sync"></canvas>
+      </div>
+    </section>
+
+    <section class="copy stack">
+      <p class="body brand-line">Car Play Sync <img class="brand-logo" src="/figma-assets/figma-logo.webp" alt=""> приложение для автовладельцев, объединяющее контроль технического состояния авто, навигацию, музыку и т.д. – всё в едином цифровом сервисе</p>
+      <p class="body">MAU: 200k<br>Rating: ️4.5 ⭐</p>
+    </section>
+
+    <figure class="image-panel gallery">
+      <div class="gallery-track">
+      <div class="phone"><img src="/figma-assets/home-screen.webp" alt=""></div><div class="phone"><img src="/figma-assets/documents-screen.webp" alt=""></div><div class="phone"><img src="/figma-assets/service-tracker-screen.webp" alt=""></div>
+      <figcaption class="caption home">Home Screen</figcaption><figcaption class="caption docs">Documents</figcaption><figcaption class="caption service">Service tracker</figcaption>
+      </div>
+    </figure>
+
+    <section class="context">
+      <div class="copy labelled"><h2 class="label">Контекст</h2><p class="body">Технические данные автомобиля становятся доступны пользователю только после авторизации в Smartcar (сервис, который связывает приложение с данными автопроизводителя)</p></div>
+      <div class="diagram">
+        <div class="diagram-step first">открыл приложение</div><div class="diagram-step second">авторизовался в&nbsp;smartcar</div><div class="diagram-step third">получил данные<br>об авто</div>
+        <img class="diagram-arrow a" src="/figma-assets/figma-arrow.svg" alt=""><img class="diagram-arrow b" src="/figma-assets/figma-arrow.svg" alt="">
+        <svg class="diagram-mobile-arrow first" viewBox="0 0 18 51" aria-hidden="true"><path fill="#414141" d="M2 0h14c1.56 0 2.45 1.73 1.65 3.05l-6.91 11.32c-.16.27-.24.58-.24.9V49c0 1.1-.67 2-1.5 2s-1.5-.9-1.5-2V15.27c0-.32-.08-.63-.24-.9L.35 3.05C-.45 1.73.44 0 2 0Z"/></svg>
+        <svg class="diagram-mobile-arrow second" viewBox="0 0 18 51" aria-hidden="true"><path fill="#414141" d="M2 0h14c1.56 0 2.45 1.73 1.65 3.05l-6.91 11.32c-.16.27-.24.58-.24.9V49c0 1.1-.67 2-1.5 2s-1.5-.9-1.5-2V15.27c0-.32-.08-.63-.24-.9L.35 3.05C-.45 1.73.44 0 2 0Z"/></svg>
+      </div>
+    </section>
+
+    <section class="copy problem-copy"><h2 class="label">Проблема</h2><p class="body">Большой дроп на этапе добавления автомобиля в гараж: пользователи не понимали ключевую ценность приложения, сталкиваясь с пейволом и отваливались до оформления подписки</p></section>
+    <figure class="image-panel gallery">
+      <div class="gallery-track">
+      <div class="phone"><img src="/figma-assets/problem-home-screen.webp" alt=""></div><div class="phone"><img src="/figma-assets/problem-paywall.webp" alt=""></div><div class="phone"><img src="/figma-assets/problem-oauth-base.webp" alt=""><img class="overlay" src="/figma-assets/problem-oauth-overlay.webp" alt=""></div>
+      <figcaption class="caption main">Home screen</figcaption><figcaption class="caption paywall">Paywall</figcaption><figcaption class="caption auth">SmartCar OAuth</figcaption>
+      </div>
+    </figure>
+
+    <section class="copy labelled"><h2 class="label">1. Добавление авто до Smartcar-подключения</h2><p class="body">Главная цель этого этапа – дать пользователю возможность добавить автомобиль напрямую в приложении ещё до авторизации через Smartcar, тем самым снизив барьер входа</p></section>
+    <figure class="image-panel gallery"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-8.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-9.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-10.webp" alt=""></div></div><figcaption class="caption flow">Флоу добавления автомобиля</figcaption></figure>
+    <section class="copy"><p class="body">Первые тесты показали, что пользователи не всегда понимают, откуда начинается добавление авто, поэтому я доработала экраны: сделала точку входа заметнее, переработала главный экран и в итоге встроила добавление первого автомобиля на онбординг</p></section>
+    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-10.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-11.webp" alt=""></div><figcaption class="caption v1">V1</figcaption><figcaption class="caption v2">V2</figcaption></div></figure>
+    <figure class="image-panel gallery"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-12.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-9.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-13.webp" alt=""></div></div><figcaption class="caption onboarding">Флоу добавления автомобиля на онбординге</figcaption></figure>
+
+    <section class="copy labelled"><h2 class="label">2. Демо данные автомобиля</h2><p class="body">Спроектировала демо-режим как альтернативный сценарий для пользователей, которые не готовы сразу добавлять реальный автомобиль, но хотят заранее ознакомиться с потенциальными данными</p></section>
+    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-14.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-15.webp" alt=""></div></div><figcaption class="caption demo">Флоу добавления демо автомобиля</figcaption></figure>
+
+    <section class="copy labelled"><h2 class="label">3. Проверка Smartcar-совместимости</h2><p class="body">Встроила проверку совместимости в основной флоу добавления авто, чтобы пользователь раньше понимал, поддерживается ли его автомобиль Smartcar. После выбора автомобиля флоу разделяется на два пути</p></section>
+    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Подключение автомобиля к Smartcar"><source src="/figma-assets/smartcar-connection.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-11.webp" alt=""></div></div><figcaption class="caption supported">подключение к Smartcar для<br>поддерживаемых авто</figcaption></figure>
+    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Альтернативный сценарий для неподдерживаемых Smartcar"><source src="/figma-assets/smartcar-unsupported.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-16.webp" alt=""></div></div><figcaption class="caption unsupported">альтернативный сценарий для<br>неподдерживаемых smartcar</figcaption></figure>
+
+    <section class="copy labelled"><h2 class="label">Результаты</h2><p class="body">Зарелизив этот функционал, конверсия в подписку выросла на 15%, а количество добавленных автомобилей на 22%. Также удалось снизить количество рефандов и негативных обращений в поддержку</p></section>
+  </main>
+  <script src="https://unpkg.com/@rive-app/canvas@2.21.6/rive.js"></script>
+  <script>
+    (function() {
+      var canvas = document.getElementById('rive-case-hero');
+      var animation = new rive.Rive({
+        src: '/case_1.riv?v=e6c29d379968',
+        canvas: canvas,
+        autoplay: true,
+        layout: new rive.Layout({ fit: rive.Fit.Cover, alignment: rive.Alignment.Center }),
+        onLoad: function() {
+          animation.resizeDrawingSurfaceToCanvas();
+          new ResizeObserver(function() { animation.resizeDrawingSurfaceToCanvas(); }).observe(canvas);
+        }
+      });
+    })();
+  </script>
+  <script>
+    document.querySelectorAll('.gallery').forEach((gallery) => {
+      let pointerId = null;
+      let startX = 0;
+      let startScroll = 0;
+      let dragged = false;
+
+      gallery.addEventListener('pointerdown', (event) => {
+        if (event.pointerType === 'touch') return;
+        pointerId = event.pointerId;
+        startX = event.clientX;
+        startScroll = gallery.scrollLeft;
+        dragged = false;
+        gallery.setPointerCapture(pointerId);
+      });
+
+      gallery.addEventListener('pointermove', (event) => {
+        if (event.pointerId !== pointerId) return;
+        const distance = event.clientX - startX;
+        if (Math.abs(distance) > 3) dragged = true;
+        if (!dragged) return;
+        gallery.scrollLeft = startScroll - distance;
+        event.preventDefault();
+      });
+
+      const stopDrag = (event) => {
+        if (event.pointerId !== pointerId) return;
+        if (gallery.hasPointerCapture(pointerId)) gallery.releasePointerCapture(pointerId);
+        pointerId = null;
+        gallery.classList.remove('is-dragging');
+      };
+
+      gallery.addEventListener('pointermove', () => {
+        if (dragged) gallery.classList.add('is-dragging');
+      });
+      gallery.addEventListener('pointerup', stopDrag);
+      gallery.addEventListener('pointercancel', stopDrag);
+      gallery.addEventListener('dragstart', (event) => event.preventDefault());
+    });
+  </script>
+</body>
+</html>

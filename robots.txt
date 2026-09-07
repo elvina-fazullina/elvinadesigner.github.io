@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /tmp/
+Disallow: /output/
+
+Sitemap: https://elvinadesigner.com/sitemap.xml

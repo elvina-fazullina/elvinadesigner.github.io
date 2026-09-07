@@ -1,0 +1,563 @@
+/* ─── mobile.css — portfolio ────────────────────────────────────────────── */
+/* Shared by: index.html (body.index-body) + case pages (body.case-body)    */
+
+/* ══════════════════════════════════════════════════════════════════════
+   INDEX PAGE mobile styles  (body.index-body)
+══════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1000px) {
+
+  /* Hide desktop nav pills */
+  .nav-pills {
+    display: none !important;
+  }
+
+  /* Show mobile bottom nav */
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: calc(390px - 40px) !important;
+    height: 64px !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    background: rgba(128, 128, 128, 0.40) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 100px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 200 !important;
+    box-shadow: 0px 0.3px 0.4px rgba(0,0,0,0.02), 0px 1.1px 1.6px rgba(0,0,0,0.06), 0px 5px 7px rgba(0,0,0,0.25) !important;
+  }
+
+  .mobile-bottom-nav__inner {
+    display: flex !important;
+    gap: 4px !important;
+    align-items: center !important;
+  }
+
+  /* Page padding: leave room for fixed bottom nav */
+  .index-body .page-content {
+    padding: 30px 20px 104px !important;
+    /* 104px = 64px nav + 20px gap + 20px extra */
+    max-width: 390px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Profile: stack avatar above text on mobile */
+  .index-body .profile {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+    margin-bottom: 40px !important;
+  }
+
+  .index-body .profile__text {
+    width: 100% !important;
+    padding-top: 0;
+  }
+
+  /* Cases: tighter gap and full width */
+  .index-body .index-cases {
+    gap: 40px !important;
+    max-width: 100% !important;
+  }
+
+  /* Case image: shorter on mobile */
+  .index-body .idx-case__image {
+    height: 225px !important;
+  }
+
+  /* Phone frame: smaller border-radius on mobile */
+  .index-body .idx-case__phone {
+    border-radius: 20px !important;
+  }
+
+  .index-body .idx-case__phone img {
+    border-radius: 20px !important;
+  }
+
+  .index-body .idx-case__phone-inner {
+    border-radius: 20px !important;
+  }
+
+  /* Interior case: same bottom overflow as others on mobile */
+  .index-body .idx-case__phone--interior {
+    top: 10.56% !important;
+    bottom: -51.43% !important;
+    border-radius: 20px !important;
+  }
+
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   CASE PAGES mobile styles  (body.case-body)
+══════════════════════════════════════════════════════════════════════ */
+
+/* ── Burger button (hidden on desktop) ── */
+.mobile-burger {
+  display: none;
+}
+
+.mobile-menu-overlay {
+  display: none;
+}
+
+/* ── Mobile nav pill (case pages, legacy) ── */
+.mobile-nav-pill {
+  display: none;
+}
+
+/* ══ Breakpoint: ≤ 1000px ════════════════════════════════════════════ */
+
+@media (max-width: 1000px) {
+
+  /* ── Case page header ── */
+  .case-body .header {
+    height: 80px !important;
+    padding: 0 16px !important;
+    background-color: transparent !important;
+  }
+
+  .case-body .header::before {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Hide desktop nav */
+  .case-body .nav-center {
+    display: none !important;
+  }
+
+  /* Hide legacy pill on index */
+  .mobile-nav-pill {
+    display: none !important;
+  }
+
+  /* ── Hamburger button ── */
+  .mobile-burger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: fixed !important;
+    top: 15px !important;
+    right: 16px !important;
+    width: 60px !important;
+    height: 50px !important;
+    background: #dca9ef !important;
+    border: none !important;
+    border-radius: 100px !important;
+    cursor: pointer !important;
+    z-index: 1002 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    transition: background 0.2s !important;
+  }
+
+  .mobile-burger:active {
+    background: #c990e0 !important;
+  }
+
+  /* ── Mobile menu overlay ── */
+  .mobile-menu-overlay {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    z-index: 1003 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.28s ease !important;
+  }
+
+  .mobile-menu-overlay.open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* ── Menu card (white bottom sheet) ── */
+  .mobile-menu-card {
+    position: absolute !important;
+    bottom: 32px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(24px) !important;
+    width: 358px !important;
+    background: #ffffff !important;
+    border-radius: 48px !important;
+    padding: 32px 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .mobile-menu-overlay.open .mobile-menu-card {
+    transform: translateX(-50%) translateY(0) !important;
+  }
+
+  .mobile-menu-cases {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .mobile-menu-case-link {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    letter-spacing: -0.24px !important;
+    line-height: 1 !important;
+    display: block !important;
+  }
+
+  .mobile-menu-case-link:active {
+    opacity: 0.6 !important;
+  }
+
+  .mobile-menu-divider {
+    height: 1px !important;
+    background: rgba(0, 0, 0, 0.12) !important;
+    width: 100% !important;
+    flex-shrink: 0 !important;
+  }
+
+  .mobile-menu-contacts {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .mobile-menu-contact-link {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    letter-spacing: -0.24px !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    gap: 4px !important;
+  }
+
+  .mobile-menu-contact-link:active {
+    opacity: 0.6 !important;
+  }
+
+  .mobile-menu-arrow {
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* ── Case page layout ── */
+  .case-body {
+    overflow-x: hidden !important;
+  }
+
+  .case-main {
+    padding-top: 96px !important;
+    padding-bottom: 80px !important;
+    overflow-x: hidden !important;
+    max-width: 390px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .cs-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .cs-row {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .cs-section:first-child .cs-row {
+    gap: 12px !important;
+  }
+
+  .cs-phone-strip,
+  .cs-rive-strip,
+  .cs-strip-landscape {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    width: auto !important;
+    max-width: calc(100% - 32px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .cs-strip-landscape > img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    transform: none !important;
+    max-width: none !important;
+  }
+
+  .cs-phone-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .cs-section + .cs-section {
+    margin-top: 53px !important;
+  }
+
+  .cs-col-left,
+  .cs-col-right {
+    width: 100% !important;
+  }
+
+  .cs-col-right {
+    padding-top: 0 !important;
+  }
+
+  .cs-col-text-stack {
+    gap: 16px !important;
+  }
+
+  /* ── Case page typography ── */
+  .cs-label,
+  .cs-title {
+    font-size: 34px !important;
+    letter-spacing: -1.02px !important;
+    line-height: 1 !important;
+    font-weight: 400 !important;
+  }
+
+  .cs-text {
+    font-size: 20px !important;
+    letter-spacing: -1px !important;
+    line-height: 1.3 !important;
+    width: auto !important;
+  }
+
+  .cs-hero-right .cs-text {
+    font-size: 20px !important;
+  }
+
+  .cs-hero-right {
+    gap: 32px !important;
+    padding-top: 8px !important;
+  }
+
+  .cs-meta {
+    gap: 32px !important;
+    align-items: flex-start !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .cs-meta-item {
+    width: auto !important;
+    gap: 8px !important;
+  }
+
+  .cs-meta-label {
+    font-size: 20px !important;
+    letter-spacing: -1px !important;
+    line-height: 1.3 !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+    opacity: 1 !important;
+  }
+
+  .cs-meta-value {
+    font-size: 20px !important;
+    letter-spacing: -1px !important;
+    line-height: 1.3 !important;
+    color: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .cs-stats {
+    gap: 32px !important;
+    align-items: flex-start !important;
+  }
+
+  .cs-stat {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    gap: 6px !important;
+  }
+
+  .cs-stat-value {
+    font-size: 48px !important;
+    letter-spacing: -1px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cs-stat-desc {
+    font-size: 20px !important;
+    letter-spacing: -1px !important;
+    line-height: 1.3 !important;
+    max-width: 100% !important;
+  }
+
+  /* ── Phone strip ── */
+  .cs-phone-strip {
+    aspect-ratio: 1320 / 539 !important;
+    height: auto !important;
+    border-radius: calc(100px * 100cqw / 1320px) !important;
+    margin-top: 16px !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    width: auto !important;
+  }
+
+  .cs-section:first-child .cs-phone-strip {
+    margin-top: 32px !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    width: auto !important;
+  }
+
+  .cs-phone-strip-inner {
+    gap: 2.42% !important;
+    top: 8.91% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+  }
+
+  .cs-phone-strip-inner .cs-phone:first-child {
+    margin-left: 0 !important;
+  }
+
+  .cs-phone {
+    flex: 0 0 24.24% !important;
+    max-width: none !important;
+    height: auto !important;
+    border-radius: calc(40px * 100cqw / 1320px) !important;
+  }
+
+  .cs-phone-sm {
+    flex: 0 0 15.53% !important;
+    max-width: none !important;
+    height: auto !important;
+    border-radius: calc(24px * 100cqw / 1320px) !important;
+  }
+
+  /* ── Single phone panel ── */
+  .cs-phone-panel,
+  .case-body .cs-phone-panel,
+  .cs-row .cs-phone-panel {
+    width: 100% !important;
+    height: 345px !important;
+    min-height: 345px !important;
+    max-height: 345px !important;
+    flex: 0 0 345px !important;
+    border-radius: 40px !important;
+    margin-top: 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .cs-phone-single {
+    width: 260px !important;
+    height: 565px !important;
+    border-radius: 32px !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .cs-phone-panel canvas {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    inset: 0 !important;
+  }
+
+  /* ── Problems: disable sticky scroll ── */
+  .cs-problems-wrapper {
+    height: auto !important;
+  }
+
+  .cs-problems-sticky {
+    position: static !important;
+    height: auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 53px !important;
+  }
+
+  .cs-problem-slide {
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .cs-problem-slide .cs-col-left {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .cs-problem-slide .cs-phone-panel {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+
+  /* ── Case burger uses dark bg since header is white ── */
+  .case-body .mobile-burger {
+    background: #edeef2 !important;
+  }
+
+  .case-body .mobile-burger svg path {
+    stroke: #000000 !important;
+  }
+
+  .case-body .mobile-nav-pill {
+    display: none;
+  }
+
+  /* ── Misc case page mobile helpers ── */
+  .card-placeholder-hidden {
+    display: none !important;
+  }
+
+  .cs-hyp3-annot {
+    display: none !important;
+  }
+
+  .cs-text-next {
+    gap: 16px !important;
+  }
+
+  .cs-next-list {
+    gap: 16px !important;
+  }
+
+}
+
+/* ══ Breakpoint: ≤ 480px ════════════════════════════════════════════ */
+
+@media (max-width: 480px) {
+  .cs-label,
+  .cs-title {
+    font-size: clamp(26px, 8.72vw, 34px) !important;
+  }
+}

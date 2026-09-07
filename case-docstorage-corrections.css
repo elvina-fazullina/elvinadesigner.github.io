@@ -1,0 +1,7 @@
+.hero-phone{width:327px;height:709px}
+.back{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.hero-visual--rive{background:#0d0d0d}
+.hero-rive{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none}
+.case > .copy{margin-top:80px}
+@media (max-width:1000px){.hero-phone{top:24px;width:150px;height:326px}.case > .copy{margin-top:60px}.hero + .product{margin-top:75px}.product + .mockups{margin-top:40px}.copy p + p{margin-top:0}}
+h1,h2{margin:0;font:inherit}

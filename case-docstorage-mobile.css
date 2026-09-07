@@ -1,0 +1,20 @@
+@media (max-width:1000px){
+  .case{width:358px;max-width:calc(100% - 32px);margin-top:91px}
+  .case>*+*{margin-top:60px}
+  .hero{height:609px}
+  .hero + .product{height:282px;margin-top:75px}
+  .product + .mockups{margin-top:40px}
+  .case > .mockups.three:nth-of-type(2) + .copy{height:159px}
+  .case > .copy:nth-of-type(4){height:241px}
+  .research{height:191px}
+  .case > .copy:nth-of-type(5){height:115px}
+  .case > .copy:nth-of-type(6){height:115px}
+  .case > .copy.plain:nth-of-type(7){height:110px}
+  .case > .copy:nth-of-type(8){height:115px}
+  .case > .copy.plain:nth-of-type(9){height:132px}
+  .case > .copy.plain:nth-of-type(10){height:44px}
+  .case > .copy:nth-of-type(11){height:115px}
+  .mockups{position:relative}
+  .mockups.three figcaption{width:780px}
+  .mockups.two figcaption{width:648px}
+}

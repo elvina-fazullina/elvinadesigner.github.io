@@ -100,6 +100,9 @@ html {
 
 @media (min-width: 1200px) {
   .page-content {
+    /* Center the 780px content column plus its two 330px gutters. */
+    max-width: 1440px;
+    margin-inline: auto;
     padding-left: 330px;
     padding-right: 330px;
   }

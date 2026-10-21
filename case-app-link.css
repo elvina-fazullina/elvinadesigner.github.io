@@ -1,4 +1,4 @@
-/* App Store link above the case title. */
+/* App Store link above the case title: 44px spacing on desktop, 24px on mobile. */
 .case-app-link {
   display: inline-flex;
   align-self: flex-start;

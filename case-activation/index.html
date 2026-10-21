@@ -53,6 +53,7 @@
     .meta-item .key { color:var(--muted); line-height:1.2; }
     .meta-item:last-child { flex:1; min-width:0; }
     .image-panel { position:relative; width:780px; height:522px; overflow:hidden; border-radius:12px; }
+    .gallery-scroll { height:100%; }
     .gallery-track { position:relative; width:780px; height:100%; }
     .hero-panel { height:368px; border:1px solid rgba(255,255,255,.1); background:var(--card); }
     .hero-panel--rive { height:501px; background:#0d0d0d; }
@@ -143,11 +144,13 @@
       .caption { top:500px; font-size:14px; }
       .caption.home { left:126px; }.caption.docs { left:390px; }.caption.service { left:654px; }
       .caption.main { left:126px; }.caption.paywall { left:390px; }.caption.auth { left:654px; }
-      .gallery > .caption.flow, .gallery > .caption.onboarding, .gallery > .caption.demo, .gallery > .caption.supported, .gallery > .caption.unsupported { position:sticky; left:0; z-index:1; display:block; width:100%; transform:none; }
-      .gallery > .caption.flow, .gallery > .caption.onboarding { top:0; margin-top:-22px; }
-      .gallery.two > .caption.demo { top:0; margin-top:-46px; }
       .caption.v1 { left:126px; }.caption.v2 { left:390px; }
-      .gallery.two > .caption.supported, .gallery.two > .caption.unsupported { top:0; margin-top:-34px; padding:0; font-size:14px; line-height:1.2; text-align:center; white-space:normal; }
+      /* Shared descriptions stay outside the horizontally scrolling screenshots. */
+      .gallery.gallery--captioned { height:auto; overflow:visible; touch-action:auto; }
+      .gallery--captioned .gallery-scroll { width:100%; height:486px; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; touch-action:pan-x; scrollbar-width:none; }
+      .gallery-scroll::-webkit-scrollbar { display:none; }
+      .gallery.gallery--captioned > .caption { position:static; display:block; width:100%; margin-top:14px; transform:none; white-space:normal; }
+      @media (pointer:fine) { .gallery--captioned { cursor:auto; } .gallery-scroll { cursor:grab; } .gallery-scroll.is-dragging { cursor:grabbing; user-select:none; } }
       .context { gap:24px; }
       
       .diagram { height:auto; aspect-ratio:358 / 372; border-radius:16px; }
@@ -162,7 +165,7 @@
   </style>
   <link rel="alternate" hreflang="en" href="https://elvinadesigner.com/case-activation/">
   <link rel="alternate" hreflang="ru" href="https://elvinadesigner.com/ru/case-activation/">
-  <link rel="stylesheet" href="/case-app-link.css?v=4">
+  <link rel="stylesheet" href="/case-app-link.css?v=5">
 </head>
 <body>
   <a class="back" href="/#cases">Back</a>
@@ -189,7 +192,7 @@
 
     <section class="copy stack">
       <p class="body brand-line">Car Play Sync <img class="brand-logo" src="/figma-assets/figma-logo.webp" alt=""> is an all-in-one app for car owners, bringing together vehicle health monitoring, navigation, music, and more.</p>
-      <p class="body">MAU: 200k<br>Rating: ️4.5 ⭐</p>
+      <p class="body">MAU: 200k<br>Rating: 4.5 ⭐</p>
     </section>
 
     <figure class="image-panel gallery">
@@ -218,17 +221,17 @@
     </figure>
 
     <section class="copy labelled"><h2 class="label">1. Adding a car before connecting to Smartcar</h2><p class="body">The goal was to lower the barrier to getting started by letting users add a car directly in the app before connecting through Smartcar.</p></section>
-    <figure class="image-panel gallery"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-8.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-9.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-10.webp" alt=""></div></div><figcaption class="caption flow">Add-car flow</figcaption></figure>
+    <figure class="image-panel gallery gallery--captioned"><div class="gallery-scroll"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-8.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-9.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-10.webp" alt=""></div></div></div><figcaption class="caption flow">Add-car flow</figcaption></figure>
     <section class="copy"><p class="body">Early tests showed that users did not always know where to start adding a car. I made the entry point more prominent, redesigned the home screen, and ultimately moved the first-car setup into onboarding.</p></section>
     <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-10.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-11.webp" alt=""></div><figcaption class="caption v1">V1</figcaption><figcaption class="caption v2">V2</figcaption></div></figure>
-    <figure class="image-panel gallery"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-12.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-9.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-13.webp" alt=""></div></div><figcaption class="caption onboarding">Adding a car during onboarding</figcaption></figure>
+    <figure class="image-panel gallery gallery--captioned"><div class="gallery-scroll"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-12.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-9.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-13.webp" alt=""></div></div></div><figcaption class="caption onboarding">Adding a car during onboarding</figcaption></figure>
 
     <section class="copy labelled"><h2 class="label">2. Exploring demo vehicle data</h2><p class="body">I designed a demo mode for users who were not ready to add their own car but wanted to explore the vehicle data the app could provide.</p></section>
-    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-14.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-15.webp" alt=""></div></div><figcaption class="caption demo">Demo-car flow</figcaption></figure>
+    <figure class="image-panel gallery two gallery--captioned"><div class="gallery-scroll"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-14.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-15.webp" alt=""></div></div></div><figcaption class="caption demo">Demo-car flow</figcaption></figure>
 
     <section class="copy labelled"><h2 class="label">3. Checking Smartcar compatibility</h2><p class="body">I integrated a compatibility check into the add-car flow so users would know earlier whether Smartcar supported their vehicle. After selecting a car, the flow branches into two paths.</p></section>
-    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Connecting a car to Smartcar"><source src="/figma-assets/smartcar-connection.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-11.webp" alt=""></div></div><figcaption class="caption supported">Connecting supported cars to Smartcar</figcaption></figure>
-    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Alternative flow for cars not supported by Smartcar"><source src="/figma-assets/smartcar-unsupported.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-16.webp" alt=""></div></div><figcaption class="caption unsupported">Alternative flow for cars not supported by Smartcar</figcaption></figure>
+    <figure class="image-panel gallery two gallery--captioned"><div class="gallery-scroll"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Connecting a car to Smartcar"><source src="/figma-assets/smartcar-connection.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-11.webp" alt=""></div></div></div><figcaption class="caption supported">Connecting supported cars to Smartcar</figcaption></figure>
+    <figure class="image-panel gallery two gallery--captioned"><div class="gallery-scroll"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Alternative flow for cars not supported by Smartcar"><source src="/figma-assets/smartcar-unsupported.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-16.webp" alt=""></div></div></div><figcaption class="caption unsupported">Alternative flow for cars not supported by Smartcar</figcaption></figure>
 
     <section class="copy labelled"><h2 class="label">Results</h2><p class="body">After launch, subscription conversion increased by 15%, and the number of cars added grew by 22%. We also reduced refunds and negative support requests.</p></section>
   </main>
@@ -249,7 +252,7 @@
     })();
   </script>
   <script>
-    document.querySelectorAll('.gallery').forEach((gallery) => {
+    document.querySelectorAll('.gallery:not(.gallery--captioned), .gallery-scroll').forEach((gallery) => {
       let pointerId = null;
       let startX = 0;
       let startScroll = 0;

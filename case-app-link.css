@@ -35,5 +35,7 @@
 @media (max-width: 799px) {
   .case-app-link {
     font-size: 16px;
+    /* Together with the 8px gap, leaves 24px before the title. */
+    margin-bottom: 16px;
   }
 }

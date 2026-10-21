@@ -325,7 +325,7 @@ html {
   align-items: baseline;
   gap: 4px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0;
   color: rgba(255, 255, 255, 0.6);
@@ -339,7 +339,7 @@ html {
   display: inline-flex;
   align-items: baseline;
   gap: 4px;
-  color: #2976ff;
+  color: #4d8dff;
 }
 
 .idx-metric::before {
@@ -350,7 +350,7 @@ html {
 .idx-case__desc {
   font-family: 'Geist Sans', 'Inter', sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.4;
   color: #fff;

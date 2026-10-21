@@ -16,11 +16,11 @@
   .mobile-bottom-nav {
     display: flex !important;
     position: fixed !important;
-    bottom: 20px !important;
+    bottom: max(20px, env(safe-area-inset-bottom)) !important;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
-    width: calc(390px - 40px) !important;
+    width: min(350px, calc(100% - 32px)) !important;
     height: 64px !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
@@ -37,13 +37,22 @@
     display: flex !important;
     gap: 4px !important;
     align-items: center !important;
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .mobile-bottom-nav .pill {
+    flex: 1;
+    min-width: 0;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   /* Page padding: leave room for fixed bottom nav */
   .index-body .page-content {
-    padding: 30px 20px 104px !important;
+    padding: 30px 20px calc(104px + env(safe-area-inset-bottom)) !important;
     /* 104px = 64px nav + 20px gap + 20px extra */
-    max-width: 390px !important;
+    max-width: 640px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -68,9 +77,49 @@
     max-width: 100% !important;
   }
 
-  /* Case image: shorter on mobile */
+  /* Preserve the animation framing at every mobile width. */
   .index-body .idx-case__image {
-    height: 225px !important;
+    height: auto !important;
+    aspect-ratio: 780 / 501;
+  }
+
+  /* Two compact caption lines, matching the reference. */
+  .index-body .idx-case__desc {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .index-body .idx-case__details {
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #2976ff;
+  }
+
+  .index-body .idx-case__app-name {
+    display: none;
+  }
+
+  .index-body .idx-case__details:not(:has(.idx-metric)) .idx-case__app-name {
+    display: inline;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .index-body .idx-case__app-name + .idx-metric::before {
+    content: none;
+  }
+
+  .index-body .idx-metric {
+    display: inline;
+  }
+
+  .index-body .idx-metric::before {
+    margin-left: 4px;
+    margin-right: 4px;
   }
 
   /* Phone frame: smaller border-radius on mobile */

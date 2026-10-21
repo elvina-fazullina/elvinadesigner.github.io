@@ -1,0 +1,39 @@
+/* App Store link above the case title. */
+.case-app-link {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 8px;
+  /* Together with the hero-copy gap (8px), leaves 44px before the title. */
+  margin-bottom: 36px;
+  color: var(--text);
+  font: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.case-app-link img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.case-app-link:hover span {
+  text-decoration: underline;
+}
+
+.case-app-link:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 799px) {
+  .case-app-link {
+    font-size: 16px;
+  }
+}

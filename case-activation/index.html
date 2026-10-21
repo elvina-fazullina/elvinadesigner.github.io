@@ -46,7 +46,7 @@
     .case > * + * { margin-top:80px; }
     .hero { display:flex; flex-direction:column; gap:20px; }
     .hero-copy { display:flex; flex-direction:column; gap:8px; padding:12px 0; }
-    .hero-copy .eyebrow { color:var(--muted); font-size:18px; line-height:1.2; }
+    .hero-copy .eyebrow { color:var(--muted); font-size:16px; line-height:1.2; }
     .body { font-size:16px; line-height:1.4; }
     .meta { display:flex; gap:80px; }
     .meta-item { display:flex; flex-direction:column; gap:8px; padding:12px 0; line-height:1.4; }
@@ -114,7 +114,7 @@
       .case > * + * { margin-top:53px; }
       .hero { gap:16px; }
       .hero-copy { padding:0; }
-      .hero-copy .eyebrow { font-size:18px; }
+      .hero-copy .eyebrow { font-size:16px; }
       .meta { display:flex; flex-direction:column; gap:0; }
       .meta-item { min-width:0; padding:12px 0; }
       .meta-item:last-child { flex:0; }
@@ -162,17 +162,22 @@
   </style>
   <link rel="alternate" hreflang="en" href="https://elvinadesigner.com/case-activation/">
   <link rel="alternate" hreflang="ru" href="https://elvinadesigner.com/ru/case-activation/">
+  <link rel="stylesheet" href="/case-app-link.css?v=4">
 </head>
 <body>
   <a class="back" href="/#cases">Back</a>
   <main class="case">
     <section class="hero">
       <div class="hero-copy">
+        <a class="case-app-link" href="https://apps.apple.com/tr/app/car-connect-play-sync-cast/id1665625393" target="_blank" rel="noopener noreferrer">
+          <img src="/car-connect-icon.webp" width="32" height="32" alt="">
+          <span>Car Connect</span>
+        </a>
         <h1 class="eyebrow">Onboarding and activation</h1>
         <p class="body">Reduced drop-off at the app's key activation step and increased subscription conversion by 15%.</p>
       </div>
       <div class="meta">
-        <div class="meta-item"><p class="key">Role</p><p>Lead designer</p></div>
+        <div class="meta-item"><p class="key">Role</p><p>Senior Product Designer</p></div>
         <div class="meta-item"><p class="key">Timeline</p><p>2024-2025</p></div>
         <div class="meta-item"><p class="key">Results</p><p>+15% subscription conversion, +22% cars added</p></div>
       </div>
@@ -222,8 +227,8 @@
     <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><img src="/figma-assets/figma-14.webp" alt=""></div><div class="phone"><img src="/figma-assets/figma-15.webp" alt=""></div></div><figcaption class="caption demo">Demo-car flow</figcaption></figure>
 
     <section class="copy labelled"><h2 class="label">3. Checking Smartcar compatibility</h2><p class="body">I integrated a compatibility check into the add-car flow so users would know earlier whether Smartcar supported their vehicle. After selecting a car, the flow branches into two paths.</p></section>
-    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Connecting a car to Smartcar"><source src="/figma-assets/smartcar-connection.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-11.webp" alt=""></div></div><figcaption class="caption supported">Connecting supported cars<br>to Smartcar</figcaption></figure>
-    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Alternative flow for cars not supported by Smartcar"><source src="/figma-assets/smartcar-unsupported.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-16.webp" alt=""></div></div><figcaption class="caption unsupported">Alternative flow for cars<br>not supported by Smartcar</figcaption></figure>
+    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Connecting a car to Smartcar"><source src="/figma-assets/smartcar-connection.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-11.webp" alt=""></div></div><figcaption class="caption supported">Connecting supported cars to Smartcar</figcaption></figure>
+    <figure class="image-panel gallery two"><div class="gallery-track"><div class="phone"><video autoplay muted loop playsinline preload="metadata" aria-label="Alternative flow for cars not supported by Smartcar"><source src="/figma-assets/smartcar-unsupported.mp4" type="video/mp4"></video></div><div class="phone"><img src="/figma-assets/figma-16.webp" alt=""></div></div><figcaption class="caption unsupported">Alternative flow for cars not supported by Smartcar</figcaption></figure>
 
     <section class="copy labelled"><h2 class="label">Results</h2><p class="body">After launch, subscription conversion increased by 15%, and the number of cars added grew by 22%. We also reduced refunds and negative support requests.</p></section>
   </main>

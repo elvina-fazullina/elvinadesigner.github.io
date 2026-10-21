@@ -11,13 +11,15 @@ h1, h2 { font:inherit; }
 .hero { display:flex; flex-direction:column; gap:20px; }
 .intro { display:flex; flex-direction:column; gap:8px; padding:12px 0; }
 .eyebrow, .labelled > h2, .goals span, .meta > div > span, figcaption { color:var(--muted); line-height:1.2; }
-.eyebrow { font-size:18px; }
+.eyebrow { font-size:16px; }
 .meta { display:flex; gap:80px; }
 .meta > div { display:flex; flex-direction:column; gap:8px; padding:12px 0; }
 .meta p { color:var(--text); font-weight:400; }
 .timeline-mobile { display:none; }
 .hero-card { position:relative; height:501px; overflow:hidden; border:1px solid rgba(255,255,255,.1); border-radius:12px; background:#0d0d0d; }
 .hero-bg { position:absolute; inset:-1px; width:calc(100% + 2px); height:calc(100% + 2px); object-fit:cover; opacity:.8; }
+.hero-card--rive .hero-bg { width:calc(100% + 2px); height:calc(100% + 2px); }
+.hero-rive { position:absolute; inset:0; display:block; width:100%; height:100%; pointer-events:none; }
 .hero-phone { position:absolute; top:calc(10.56% - .79px); bottom:calc(-51.43% - 2.03px); left:calc(50% - .5px); aspect-ratio:996/2160; transform:translateX(-50%); overflow:hidden; border:2px solid rgba(255,255,255,.04); border-radius:40px; }
 .hero-phone img { position:absolute; width:100%; height:100%; object-fit:cover; border-radius:38px; }
 .hero-phone-overlay { top:-19.26%; left:-.11%; width:100.21% !important; }

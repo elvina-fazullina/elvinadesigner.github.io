@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.2/index.css">
-  <link rel="stylesheet" href="/case-ai-remodel.css?v=7">
+  <link rel="stylesheet" href="/case-ai-remodel.css?v=9">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,10 +40,10 @@
         <h1 class="eyebrow">AI Home Remodel</h1>
         <p>Запустила AI Home Remodel мобильное приложение 0 → 1/N. Отвечала за все ключевые сценарии: формирование стилевой базы для корректной AI-генерации, генерация визуализации, удаление лишних объектов с фотографии и поиск товаров для реализации идеи</p>
       </div>
-      <div class="meta"><div><span>Роль</span><p>Ведущий дизайнер</p></div><div><span>Таймлайн</span><p>2025-2026</p></div></div>
-      <div class="hero-card">
-        <img class="hero-bg" src="/ai-assets/hero-background.webp" alt="">
-        <div class="hero-phone"><img src="/ai-assets/hero-base.webp" alt="Экран AI Home Remodel"><img class="hero-phone-overlay" src="/ai-assets/hero-remodel.webp" alt=""></div>
+      <div class="meta"><div><span>Роль</span><p>Senior Product Designer</p></div><div><span>Таймлайн</span><p>2025-2026</p></div></div>
+      <div class="hero-card hero-card--rive">
+        <img class="hero-bg" src="/figma-assets/home-case-remodel-bg.webp" alt="">
+        <canvas id="rive-remodel" class="hero-rive" aria-label="Анимация приложения AI Home Remodel"></canvas>
       </div>
     </section>
 
@@ -75,6 +75,22 @@
 
     <section class="copy labelled results"><h2>Результаты</h2><p>За сжатые сроки собрала 0→1 дизайн AI Home Remodel и подготовила продукт к запуску. В первой версии реализовали основной путь от фотографии пространства до готовой AI визуализации</p></section>
   </main>
+  <script src="https://unpkg.com/@rive-app/canvas@2.21.6/rive.js"></script>
+  <script>
+    (function() {
+      var canvas = document.getElementById('rive-remodel');
+      var animation = new rive.Rive({
+        src: '/case_aihomeremodel.riv?v=20260906-1',
+        canvas: canvas,
+        autoplay: true,
+        layout: new rive.Layout({ fit: rive.Fit.Cover, alignment: rive.Alignment.Center }),
+        onLoad: function() {
+          animation.resizeDrawingSurfaceToCanvas();
+          new ResizeObserver(function() { animation.resizeDrawingSurfaceToCanvas(); }).observe(canvas);
+        }
+      });
+    })();
+  </script>
   <script>
     document.querySelectorAll('img[src^="/ai-assets/"]').forEach((image) => {
       const url = new URL(image.src);

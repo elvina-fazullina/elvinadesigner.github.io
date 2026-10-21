@@ -18,10 +18,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.2/index.css">
-  <link rel="stylesheet" href="/style.css?v=32">
-  <link rel="stylesheet" href="/mobile.css?v=31">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.2/500.css">
+  <link rel="stylesheet" href="/style.css?v=44">
+  <link rel="stylesheet" href="/mobile.css?v=35">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,17 +40,10 @@
 </head>
 <body class="index-body">
 
-  <!-- Desktop nav pills (fixed top-right) -->
-  <nav class="nav-pills">
-    <a href="/resume.pdf?v=54428b993ad7" target="_blank" rel="noopener" class="pill">CV</a>
-    <a href="mailto:elvinaaa.fazullina@gmail.com" class="pill">email</a>
-    <a href="https://t.me/elvina_fazullina" target="_blank" rel="noopener" class="pill">telegram</a>
-  </nav>
-
   <!-- Mobile bottom nav (fixed bottom, shown on mobile only) -->
   <nav class="mobile-bottom-nav">
     <div class="mobile-bottom-nav__inner">
-      <a href="/resume.pdf?v=54428b993ad7" target="_blank" rel="noopener" class="pill pill--dark">CV</a>
+      <a href="/resume.pdf?v=5fa10cd0af65" target="_blank" rel="noopener" class="pill pill--dark">CV</a>
       <a href="mailto:elvinaaa.fazullina@gmail.com" class="pill pill--dark">email</a>
       <a href="https://t.me/elvina_fazullina" target="_blank" rel="noopener" class="pill pill--dark">telegram</a>
     </div>
@@ -62,8 +56,19 @@
       <img src="/avatar.webp" alt="Elvina Fazullina" class="profile__avatar">
       <div class="profile__text">
         <h1 class="profile__name">Elvina Fazullina</h1>
-        <p class="profile__bio">Product designer with 5+ years of experience in B2C products, including AI-powered apps. Delivered high-value results by launching a product from scratch that reached 200K+ MAU.</p>
+        <p class="profile__bio">Product designer with 5+ years of experience in B2C products, including AI-powered apps.</p>
+        <section class="profile__experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading" class="profile__label">Experience</h2>
+          <p class="profile__bio">Delivered high-value results by launching a product from scratch that reached 200K+ MAU.</p>
+        </section>
       </div>
+
+      <!-- Desktop contacts -->
+      <nav class="nav-pills">
+        <a href="/resume.pdf?v=5fa10cd0af65" target="_blank" rel="noopener" class="pill">CV</a>
+        <a href="mailto:elvinaaa.fazullina@gmail.com" class="pill">email</a>
+        <a href="https://t.me/elvina_fazullina" target="_blank" rel="noopener" class="pill">telegram</a>
+      </nav>
     </section>
 
     <!-- Cases -->
@@ -71,63 +76,69 @@
 
       <!-- Case 1: Onboarding and activation -->
       <article class="idx-case">
-        <a href="/case-activation/" class="idx-case__image-link" aria-label="View case study: onboarding and activation">
+        <a href="/case-activation/" class="idx-case__link" aria-labelledby="case-title-1">
           <div class="idx-case__image idx-case__image--case1">
             <div class="idx-case__content">
               <img src="/case1-bg.webp" class="idx-case__bg-img" alt="" aria-hidden="true">
               <canvas id="rive-case1" class="idx-case__rive" aria-label="Car Play Sync app animation"></canvas>
             </div>
           </div>
-        </a>
         <div class="idx-case__meta">
-          <div class="idx-case__metrics">
-            <div class="idx-metric">
-              <span class="idx-metric__label">Conversion rate</span>
-              <span class="idx-metric__value">+15%</span>
+          <img class="idx-case__app-icon" src="/car-connect-icon.webp" alt="" width="44" height="44" loading="lazy">
+          <div class="idx-case__caption">
+            <p id="case-title-1" class="idx-case__desc">New add-car flow that reduced activation drop-off</p>
+            <div class="idx-case__details">
+              <span class="idx-case__app-name">Car Connect</span>
+              <span class="idx-metric"><span class="idx-metric__value">+15%</span> <span class="idx-metric__label">subscription conversion</span></span>
             </div>
           </div>
-          <p class="idx-case__desc">Designed an add-car flow that reduced drop-off at the app's key activation step and increased subscription conversion by 15%.</p>
-        </div>
-      </article>
-
-      <!-- Case 2: AI home remodel -->
-      <article class="idx-case">
-        <a href="/case-aihomeremodel/" class="idx-case__image-link" aria-label="View case study: AI Home Remodel">
-          <div class="idx-case__image idx-case__image--remodel">
-          <div class="idx-case__content">
-            <img src="/figma-assets/home-case-remodel-bg.webp" class="idx-case__bg-img idx-case__bg-img--remodel" alt="" aria-hidden="true">
-            <canvas id="rive-remodel" class="idx-case__rive" aria-label="AI Home Remodel app animation"></canvas>
-          </div>
         </div>
         </a>
-        <div class="idx-case__meta">
-          <p class="idx-case__desc">Launched the AI Home Remodel mobile app 0 → 1/N</p>
-        </div>
       </article>
 
-      <!-- Case 3: Document storage -->
+      <!-- Case 2: Document storage -->
       <article class="idx-case">
-        <a href="/case-docstorage/" class="idx-case__image-link" aria-label="View case study: document storage">
+        <a href="/case-docstorage/" class="idx-case__link" aria-labelledby="case-title-2">
           <div class="idx-case__image idx-case__image--case2">
             <div class="idx-case__content">
               <img src="/case2-bg.webp" class="idx-case__bg-img" alt="" aria-hidden="true">
               <canvas id="rive-case2" class="idx-case__rive" aria-label="Car Play Sync app animation"></canvas>
             </div>
           </div>
-        </a>
         <div class="idx-case__meta">
-          <div class="idx-case__metrics">
-            <div class="idx-metric">
-              <span class="idx-metric__label">Retention rate</span>
-              <span class="idx-metric__value">1.8 pp</span>
-            </div>
-            <div class="idx-metric">
-              <span class="idx-metric__label">Activation rate</span>
-              <span class="idx-metric__value">38%</span>
+          <img class="idx-case__app-icon" src="/car-connect-icon.webp" alt="" width="44" height="44" loading="lazy">
+          <div class="idx-case__caption">
+            <p id="case-title-2" class="idx-case__desc">Document storage for car owners that increased retention</p>
+            <div class="idx-case__details">
+              <span class="idx-case__app-name">Car Connect</span>
+              <span class="idx-metric"><span class="idx-metric__value">38%</span> <span class="idx-metric__label">activation rate</span></span>
+              <span class="idx-metric"><span class="idx-metric__value">1.8 pp</span> <span class="idx-metric__label">retention rate</span></span>
             </div>
           </div>
-          <p class="idx-case__desc">Designed document storage for an all-in-one app for car owners, increasing retention by 1.8 percentage points.</p>
         </div>
+        </a>
+      </article>
+
+      <!-- Case 3: AI home remodel -->
+      <article class="idx-case">
+        <a href="/case-aihomeremodel/" class="idx-case__link" aria-labelledby="case-title-3">
+          <div class="idx-case__image idx-case__image--remodel">
+          <div class="idx-case__content">
+            <img src="/figma-assets/home-case-remodel-bg.webp" class="idx-case__bg-img idx-case__bg-img--remodel" alt="" aria-hidden="true">
+            <canvas id="rive-remodel" class="idx-case__rive" aria-label="AI Home Remodel app animation"></canvas>
+          </div>
+        </div>
+        <div class="idx-case__meta">
+          <img class="idx-case__app-icon" src="/ai-assets/brand-icon.webp" alt="" width="44" height="44" loading="lazy">
+          <div class="idx-case__caption">
+            <p id="case-title-3" class="idx-case__desc">Launched the AI Home Remodel mobile app 0 → 1/N</p>
+            <div class="idx-case__details">
+              <span class="idx-case__app-name">AI Home Remodel</span>
+
+            </div>
+          </div>
+        </div>
+        </a>
       </article>
 
     </section>
@@ -139,7 +150,7 @@
     (function() {
       var canvas = document.getElementById('rive-case1');
       var animation = new rive.Rive({
-        src: '/case_1.riv?v=e6ea5b1f815c',
+        src: '/case_1.riv?v=e6c29d379968',
         canvas: canvas,
         autoplay: true,
         layout: new rive.Layout({ fit: rive.Fit.Cover, alignment: rive.Alignment.Center }),

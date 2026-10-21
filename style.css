@@ -23,7 +23,7 @@ html {
   font-family: 'Geist Sans', 'Inter', -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ── Pill base (shared desktop + mobile) ── */
@@ -51,7 +51,7 @@ html {
 }
 
 .pill:focus-visible,
-.idx-case__image-link:focus-visible {
+.idx-case__link:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 4px;
 }
@@ -65,15 +65,12 @@ html {
   background: rgba(0, 0, 0, 0.45);
 }
 
-/* ── Desktop nav pills (fixed top-right) ── */
+/* ── Desktop contacts, below the profile ── */
 
 .nav-pills {
-  position: fixed;
-  top: 30px;
-  right: 30px;
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
-  z-index: 200;
 }
 
 /* ── Mobile bottom nav (hidden on desktop, shown via mobile.css) ── */
@@ -93,18 +90,33 @@ html {
 
 @media (min-width: 1001px) {
   .page-content {
-    padding-left: 60px;
-    padding-right: 330px;
+    display: grid;
+    grid-template-columns: 300px minmax(0, 600px);
+    align-items: start;
+    gap: 60px;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
   }
-}
 
-@media (min-width: 1200px) {
-  .page-content {
-    /* Center the 780px content column plus its two 330px gutters. */
-    max-width: 1440px;
-    margin-inline: auto;
-    padding-left: 330px;
-    padding-right: 330px;
+  .index-body .profile {
+    position: sticky;
+    top: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+    min-width: 0;
+  }
+
+  .index-body .profile__text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .index-body .idx-case__image {
+    height: auto;
+    aspect-ratio: 780 / 501;
   }
 }
 
@@ -135,9 +147,17 @@ html {
   padding: 12px 0;
 }
 
-.profile__name {
+.profile__experience {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.profile__name,
+.profile__label {
   font-family: 'Geist Sans', 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.2px;
   line-height: 1.2;
@@ -146,7 +166,7 @@ html {
 
 .profile__bio {
   font-family: 'Geist Sans', 'Inter', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.2px;
   line-height: 1.4;
@@ -159,7 +179,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  max-width: 780px;
+  max-width: 600px;
 }
 
 /* ── Single case ── */
@@ -167,7 +187,7 @@ html {
 .idx-case {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 /* Image card */
@@ -218,19 +238,18 @@ html {
   pointer-events: none;
 }
 
-.idx-case__image-link {
-  display: block;
+.idx-case__link {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: inherit;
   text-decoration: none;
+  border-radius: 12px;
 }
 
 .idx-case__content {
   position: absolute;
   inset: 0;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.idx-case__image-link:hover .idx-case__content {
-  transform: scale(1.06);
 }
 
 /* Phone frame inside card */
@@ -277,49 +296,62 @@ html {
   object-fit: cover;
 }
 
-/* Meta: metrics + description */
+/* App icon, description and inline results */
 .idx-case__meta {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
   gap: 12px;
 }
 
-.idx-case__metrics {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+.idx-case__app-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.idx-metric {
+.idx-case__caption {
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 2px;
 }
 
-.idx-metric__label {
-  font-family: 'Geist Sans', 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: -0.2px;
-  line-height: 21.6px;
-  text-transform: uppercase;
+.idx-case__details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.idx-metric__value {
-  font-family: 'Geist Sans', 'Inter', sans-serif;
-  font-size: 14px;
+.idx-case__app-name {
   font-weight: 400;
-  letter-spacing: -0.2px;
-  line-height: 21.6px;
+}
+
+.idx-metric {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: #2976ff;
+}
+
+.idx-metric::before {
+  content: "·";
   color: rgba(255, 255, 255, 0.6);
 }
 
 .idx-case__desc {
   font-family: 'Geist Sans', 'Inter', sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  letter-spacing: -0.2px;
+  font-weight: 500;
+  letter-spacing: 0;
   line-height: 1.4;
   color: #fff;
 }
@@ -444,7 +476,7 @@ html {
   color: #fff;
   background-color: #f04b23;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.01em;
   transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
 }
